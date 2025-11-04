@@ -1,0 +1,40 @@
+Segunda clase css
+
+/*! importante
+
+Css es una hoja de estilos en cascada
+
+Es importante que sea en casacada porque 
+
+Porque va procesando desde arrba hacia abajo, el navegador lo lee asi. 
+
+Lo ultimo que yo aplique va a see lo que quede. Lo ultimo es lo que mas peso tiene 
+
+NO SE USAN STYLES (etiqueta style en html) EN EL HTML ----> solo en el css 
+
+*/
+
+/*?
+
+
+/* selectores de ccs
+id 
+
+class
+
+elemento (etiqueta html) 
+
+*/
+
+section{
+    color: blueviolet;
+    background-color: rgb(245, 237, 220);
+}
+
+h1{
+    color:brown
+}
+
+body{
+    background-color: beige;
+}
