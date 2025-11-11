@@ -16,6 +16,8 @@ body {
     background-color: #d1ccbd;
 }
 
+
+
 /*Encabezado de pagina*/
 
 /* ==== ESTILOS BASE ==== */
@@ -126,14 +128,19 @@ body {
     /* Ocupa el 90% del ancho disponible */
     max-width: 1200px;
     /* Limita el ancho máximo para pantallas grandes */
+    border-radius: 8px;
+    /* Bordes redondeados para un aspecto más moderno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     margin: 20px auto;
     /* Agrega un margen superior/inferior y lo centra horizontalmente */
     padding: 20px;
     /* Espacio interno entre el contenido y los bordes */
-    border-radius: 8px;
-    /* Bordes redondeados para un aspecto más moderno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+    /* centra verticalmente */
+    gap: 20px;
 }
 
 
@@ -144,12 +151,31 @@ body {
     margin: 10px;
 }
 
+.bloque__title {
+    font-size: 14px;
+    margin: 20px 20px;
+    border-radius: 40px;
+    font-family: sans-serif;
+    background-color: #6AA6A6;
+    padding: 10px 10px;
+    color: #C7B689;
+}
+.bloque__title a {
+    all: unset;
+}
+
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+    box-sizing: border-box;
 }
 
+/*
 .programa {
     display: flex;
     flex-direction: column;
@@ -157,9 +183,8 @@ body {
     background-color: aliceblue;
     border: 2px solid grey;
     text-align: justify;
-    margin: 10px;
-    padding: 10px 20px 10px 20px;
 }
+
 
 .programa__titulo {
     font-family: sans-serif;
@@ -172,24 +197,25 @@ body {
     max-width: 100%;
     padding: 5px;
 }
+*/
 
-.programa__texto {
+
+.card-text {
     color: grey;
     font-family: sans-serif;
-    padding: 10px;
 }
 
-.programa__boton {
-    font-family: sans-serif;
-    font-size: large;
-    border: none;
-    font-weight: bold;
-    background-color: #4A8C7A;
-    padding: 10px;
+.btn__btn__primary {
+    color: #C7B689;
+    background-color: #6AA6A6;
+    border: 2px solid #C7B689;
+    padding: 10px 10px;
+    border-radius: 40px;
+    text-align: center;
 }
 
-.programa__boton :hover {
-    opacity: 40%;
+.btn__btn__primary :hover {
+    opacity: 80%;
 }
 
 
