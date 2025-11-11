@@ -23,6 +23,7 @@ body {
     background-color: #c7b689;
     position: sticky;
     top: 0;
+    z-index: 10;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
