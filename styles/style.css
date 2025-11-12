@@ -61,7 +61,7 @@ body {
 }
 
 .navbar a {
-    color: black;
+    color: grey;
     text-decoration: none;
     font-size: 18px;
     font-family: sans-serif;
@@ -72,7 +72,7 @@ body {
 
 .navbar a:hover {
     opacity: 0.7;
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 /* ==== MENU TOGGLE ==== */
@@ -164,6 +164,10 @@ body {
     all: unset;
 }
 
+.bloque__title :hover{
+    opacity: 80%;
+}
+
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -175,7 +179,6 @@ body {
     box-sizing: border-box;
 }
 
-/*
 .programa {
     display: flex;
     flex-direction: column;
@@ -184,7 +187,6 @@ body {
     border: 2px solid grey;
     text-align: justify;
 }
-
 
 .programa__titulo {
     font-family: sans-serif;
@@ -197,8 +199,6 @@ body {
     max-width: 100%;
     padding: 5px;
 }
-*/
-
 
 .card-text {
     color: grey;
