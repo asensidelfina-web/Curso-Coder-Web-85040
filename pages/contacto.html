@@ -37,7 +37,81 @@
     </header>
 
     <main class="main">
-        <h2>Contactate con nosotros</h2>
+        <div class="bloque__title">
+            <h2>Contactate con nosotros</h2>
+        </div>
+        <section class="formulario_contacto">
+
+            <div class="form-floating mb-3">
+                <!-- NOMBRE -->
+                <div class="form-floating mb-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingNombre" name="nombre" placeholder="Nombre"
+                            maxlength="40" required>
+                        <label for="floatingNombre">Nombre</label>
+                    </div>
+                </div>
+                <!-- APELLIDO -->
+                <div class="form-floating mb-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingApellido" name="apellido"
+                            placeholder="Apellido" maxlength="40">
+                        <label for="floatingApellido">Apellido (opcional)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                <label for="floatingEmail">Tu correo electrónico</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingExperiencia">
+                    <option selected disabled>¿Qué experiencia es de tu interés?</option>
+                    <option value="1">Asesoramiento para Working Visa</option>
+                    <option value="2">Curso de idioma</option>
+                    <option value="3">Intercambio Deportivo</option>
+                </select>
+                <label for="floatingExperiencia">Seleccioná la opción</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingDestino">
+                    <option selected disabled>¿Qué destino te interesa?</option>
+                    <option value="1">Nueva Zelanda</option>
+                    <option value="2">Otro destino</option>
+                </select>
+                <label for="floatingDestino">Seleccioná el destino</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Dejános tus preguntas o comentarios" id="floatingMensaje"
+                    style="height: 100px"></textarea>
+                <label for="floatingMensaje">Dejános tus preguntas o comentarios</label>
+            </div>
+            <div class="form-floating mb-3">
+                <label for="telefono" class="form-label">Queres que te contactemos? Podes dejarnos tu teléfono
+                    celular</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="+54 9 11 2345 6789"
+                    pattern="^\+?[0-9\s\-]{7,20}$" required>
+                <div class="form-text">
+                    Podés incluir el código de país y el signo +. Ejemplo: +54 9 11 2345 6789
+                </div>
+                <div class="invalid-feedback">
+                    Por favor ingresá un teléfono válido.
+                </div>
+            </div>
+            <div>
+                <a href="" class="btn__btn__primary">Enviar</a>
+            </div>
+        </section>
+
+
+
+
+
+
 
     </main>
 
