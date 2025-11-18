@@ -1,1 +1,47 @@
 //Aca va a ir todo el codigo de css y sass de mi header y su responsive
+@use "variables" as v;
+
+header {
+    background-color: v.$background-header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .imagen-logo {
+        width: 90px;
+        height: 50px;
+        object-fit: cover;
+    }
+
+    .logo-container p {
+        font-size: 14px;
+        margin: 0;
+        font-family: v.$fuente-secundaria;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 15px;
+
+        .navbar a {
+            color: v.$fuente-color-titulos;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: v.$fuente-secundaria;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }:hover {
+                opacity: 0.7;
+                border: 1px solid grey;
+            }
+    }
+}

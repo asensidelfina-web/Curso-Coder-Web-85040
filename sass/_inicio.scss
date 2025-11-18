@@ -1,0 +1,45 @@
+@use "variables" as v;
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+    box-sizing: border-box;
+
+    .card-testimonio {
+        @include v.flex(column, space-between, center, wrap)
+
+        .card-body{
+            .card-title{
+
+            }
+            .card-text{
+                
+            }
+        }
+    }
+
+
+
+    .programa {
+        @include v.flex(column, center, justify, wrap) 
+        background-color: aliceblue;
+        border: 2px solid grey;
+
+        .programa__titulo {
+            font-family: $fuente-secundaria;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .programa__imagen {
+            max-width: 100%;
+            padding: 5px;
+        }
+    }
+}

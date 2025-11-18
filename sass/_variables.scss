@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$fuente: Nunito Sans;
+$background:#d1ccbd;
+$fuente-color-titulos: grey;
+$fuente-color-text: black;
+$ancho50: 50vw;
+$background-header:#c7b689;
+$fuente-secundaria: sans-serif;
+
+*{
+    font-family: $fuente;
+    color: $fuente-color-titulos;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//EXTENDS Y MIXINS
+
+@mixin flex($direction, $justify, $aling, $wrap)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-wrap: $wrap;
+}
