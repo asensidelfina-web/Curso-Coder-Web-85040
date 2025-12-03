@@ -1,18 +1,141 @@
-/* Error: expected ";".
- *    ,
- * 14 |         @include v.flex(column, space-between, center, wrap)
- *    |                                                             ^
- *    '
- *   sass\_inicio.scss 14:61  @use
- *   sass\style.scss 6:1      root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 14 \2502          @include v.flex(column, space-between, center, wrap)\d\a    \2502                                                              ^\a    \2575 \a   sass\\_inicio.scss 14:61  @use\a   sass\\style.scss 6:1      root stylesheet';
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  font-family: Nunito Sans;
+  color: grey;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+header {
+  background-color: #c7b689;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .imagen-logo {
+  width: 90px;
+  height: 50px;
+  object-fit: cover;
+}
+header .logo-container p {
+  font-size: 14px;
+  margin: 0;
+  font-family: sans-serif;
+}
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+header .navbar ul .navbar a {
+  color: grey;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header .navbar ul :hover {
+  opacity: 0.7;
+  border: 1px solid grey;
+}
+
+.main {
+  background-color: #d1ccbd;
+  display: block;
+  width: 70%;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.main .carrusel {
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+.main .carrusel .carrusel img {
+  max-height: 400px;
+  /* controla el alto */
+  object-fit: cover;
+  /* recorta para que no se deforme */
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+  /* opcional, esquinas suaves */
+}
+.main .contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: start;
+  justify-items: center;
+  box-sizing: border-box;
+}
+.main .contenedor .card-testimonio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.main .contenedor .card-testimonio .card-body .card-text {
+  color: grey;
+  font-family: sans-serif;
+}
+.main .contenedor .card-testimonio .card-body .btn__btn__primary {
+  color: #c7b689;
+  background-color: #6AA6A6;
+  border: 2px solid #c7b689;
+  padding: 10px 10px;
+  border-radius: 40px;
+  text-align: center;
+  align-items: flex-end;
+}
+.main .contenedor .card-testimonio .card-body .btn__btn__primary .btn__btn__primary :hover {
+  opacity: 80%;
+}
+.main .programa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: justify;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  border: 2px solid grey;
+}
+.main .programa .programa__titulo {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+.main .programa .programa__imagen {
+  max-width: 100%;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */

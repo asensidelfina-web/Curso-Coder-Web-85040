@@ -1,37 +1,92 @@
 @use "variables" as v;
 
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.main {
+    background-color: v.$background;
+    display: block;
+    width: 70%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    width: 100%;
-    margin: 0 auto;
-    align-items: start;
-    justify-items: center;
-    box-sizing: border-box;
 
-    .card-testimonio {
-        @include v.flex(column, space-between, center, wrap)
+    .carrusel {
+        display: block;
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
 
-        .card-body{
-            .card-title{
-
-            }
-            .card-text{
-                
-            }
+        .carrusel img {
+            max-height: 400px;
+            /* controla el alto */
+            object-fit: cover;
+            /* recorta para que no se deforme */
+            width: 100%;
+            border-radius: 10px;
+            margin: 10px;
+            /* opcional, esquinas suaves */
         }
     }
 
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: start;
+        justify-items: center;
+        box-sizing: border-box;
 
+        .card-testimonio {
+            @include v.flex(column, space-between, center, wrap);
+            flex-grow: 1;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            .card-body {
+
+                .card-text {
+                    color: v.$fuente-color-titulos;
+                    font-family: v.$fuente-secundaria;
+                }
+
+                .btn__btn__primary {
+                    color:v.$background-header;
+                    background-color: #6AA6A6;
+                    border: 2px solid v.$background-header;
+                    padding: 10px 10px;
+                    border-radius: 40px;
+                    text-align: center;
+                    align-items: flex-end;
+
+                    .btn__btn__primary :hover {
+                        opacity: 80%;
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
 
     .programa {
-        @include v.flex(column, center, justify, wrap) 
+        @include v.flex(column, center, justify, wrap);
+
         background-color: aliceblue;
         border: 2px solid grey;
 
         .programa__titulo {
-            font-family: $fuente-secundaria;
+            font-family: v.$fuente-secundaria;
             font-weight: bold;
             text-align: center;
             padding: 5px;
