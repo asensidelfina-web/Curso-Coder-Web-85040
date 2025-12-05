@@ -17,7 +17,7 @@ $background-body:white;
     box-sizing: border-box;
 }
 
-//EXTENDS Y MIXINS
+// MIXINS
 
 @mixin flex($direction, $justify, $aling, $wrap)
 {
@@ -27,3 +27,19 @@ $background-body:white;
     align-items: $aling;
     flex-wrap: $wrap;
 }
+
+// MIXIN RESPONSIVE
+@mixin mobile {
+    @media (max-width: 768px)
+    {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (max-width: 1024px){
+        @content; 
+    }
+}
+
+//EXTENDS 

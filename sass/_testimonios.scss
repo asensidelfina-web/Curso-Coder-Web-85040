@@ -1,0 +1,111 @@
+@use "variables" as v;
+
+.main {
+    background-color: v.$background;
+    display: block;
+    width: 70%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .bloque__title {
+        font-size: 14px;
+        margin: 20px 20px;
+        border-radius: 40px;
+        font-family: v.$fuente-secundaria;
+        background-color: #6AA6A6;
+        padding: 10px 10px;
+        color: v.$background-header;
+
+        .bloque__title a {
+            all: unset;
+        }
+
+        .bloque__title :hover {
+            opacity: 80%;
+        }
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: start;
+        justify-items: center;
+        box-sizing: border-box;
+
+        .card-testimonio {
+            @include v.flex(column, space-between, center, wrap);
+            flex-grow: 1;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            .card-body {
+
+                .card-text {
+                    color: v.$fuente-color-titulos;
+                    font-family: v.$fuente-secundaria;
+                }
+
+                .btn__btn__primary {
+                    color: v.$background-header;
+                    background-color: #6AA6A6;
+                    border: 2px solid v.$background-header;
+                    padding: 10px 10px;
+                    border-radius: 40px;
+                    text-align: center;
+                    align-items: flex-end;
+
+                    .btn__btn__primary :hover {
+                        opacity: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include v.mobile {
+        .main {
+            width: 95%;
+            padding: 15px;
+        }
+
+        .contenedor {
+            grid-template-columns: 1fr;
+            /* 1 columna */
+            gap: 15px;
+        }
+
+        .card-testimonio {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include v.table {
+        .main {
+            width: 85%;
+        }
+
+        .contenedor {
+            grid-template-columns: 1fr 1fr;
+            /* 2 columnas */
+        }
+
+        .card-testimonio {
+            width: 16rem;
+            height: auto;
+        }
+    }
+}

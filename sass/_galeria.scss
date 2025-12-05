@@ -1,0 +1,45 @@
+@use "variables" as v;
+.main {
+    background-color: v.$background;
+    display: block;
+    width: 70%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .carrusel {
+        display: block;
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+
+        .carrusel img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    }
+    @include v.mobile{
+        .main {
+        width: 95%;
+        padding: 15px;
+        }
+        .carrusel img {
+        max-height: 250px;}
+    }
+    @include v.table{
+        .main {
+        width: 85%;
+    }
+    
+    }
+
+}

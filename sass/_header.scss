@@ -44,4 +44,30 @@ header {
                 border: 1px solid grey;
             }
     }
+
+    @include v.mobile
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: v.$background-header;
+        width: 200px;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 10px 10px;
+    }
+
+    #menu-toggle:checked+.menu-icon+.navbar ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
 }
