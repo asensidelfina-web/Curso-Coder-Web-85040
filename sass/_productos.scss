@@ -62,19 +62,7 @@
         }
     }
 
-    @include v.mobile {
-        main {
-            width: 95%;
-            padding: 15px;
-        }
-
-        .contenedor {
-            grid-template-columns: 1fr;
-            /* 1 columna */
-            gap: 15px;
-        }
-
-    }
+    
 
     @include v.table {
         .main {
@@ -86,5 +74,17 @@
             /* 2 columnas */
         }
 
+    }
+    @include v.mobile {
+        main {
+            width: 95%;
+            padding: 15px;
+        }
+
+        .contenedor {
+            grid-template-columns: 1fr;
+            /* 1 columna */
+            gap: 15px;
+        }
     }
 }

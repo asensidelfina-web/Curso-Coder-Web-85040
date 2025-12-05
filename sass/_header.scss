@@ -45,7 +45,7 @@ header {
             }
     }
 
-    @include v.mobile
+    @include v.mobile{
     .menu-icon {
         display: block;
     }
@@ -70,4 +70,5 @@ header {
     .navbar ul li {
         margin: 10px 0;
     }
+}
 }

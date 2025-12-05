@@ -59,7 +59,7 @@
                 }
 
                 .btn__btn__primary {
-                    color:v.$background-header;
+                    color: v.$background-header;
                     background-color: #6AA6A6;
                     border: 2px solid v.$background-header;
                     padding: 10px 10px;
@@ -99,54 +99,56 @@
     }
 
 
-    @include v.mobile{
+
+
+    @include v.table {
         .main {
-        width: 95%;
-        padding: 15px;
+            width: 85%;
+        }
+
+        .contenedor {
+            grid-template-columns: 1fr 1fr;
+            /* 2 columnas */
+        }
+
+        .imagen-principal {
+            width: 250px;
+            height: 250px;
+        }
+
+        .card-testimonio {
+            width: 16rem;
+            height: auto;
+        }
     }
 
-    .contenedor {
-        grid-template-columns: 1fr; /* 1 columna */
-        gap: 15px;
-    }
-
-    .imagen-principal {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-        margin: auto;
-        display: block;
-    }
-
-    .card-testimonio {
-        width: 100%;
-        height: auto;
-    }
-
-    .carrusel img {
-        max-height: 250px;
-    }
-    }
-
-    @include v.table{
+    @include v.mobile {
         .main {
-        width: 85%;
-    }
+            width: 95%;
+            padding: 15px;
+        }
 
-    .contenedor {
-        grid-template-columns: 1fr 1fr; /* 2 columnas */
-    }
+        .contenedor {
+            grid-template-columns: 1fr;
+            /* 1 columna */
+            gap: 15px;
+        }
 
-    .imagen-principal {
-        width: 250px;
-        height: 250px;
-    }
+        .imagen-principal {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin: auto;
+            display: block;
+        }
 
-    .card-testimonio {
-        width: 16rem;
-        height: auto;
-    }
-    }
+        .card-testimonio {
+            width: 100%;
+            height: auto;
+        }
 
-
+        .carrusel img {
+            max-height: 250px;
+        }
+    }
 }

@@ -75,6 +75,23 @@
         }
     }
 
+    
+
+    @include v.table {
+        .main {
+            width: 85%;
+        }
+
+        .contenedor {
+            grid-template-columns: 1fr 1fr;
+            /* 2 columnas */
+        }
+
+        .card-testimonio {
+            width: 16rem;
+            height: auto;
+        }
+    }
     @include v.mobile {
         .main {
             width: 95%;
@@ -89,22 +106,6 @@
 
         .card-testimonio {
             width: 100%;
-            height: auto;
-        }
-    }
-
-    @include v.table {
-        .main {
-            width: 85%;
-        }
-
-        .contenedor {
-            grid-template-columns: 1fr 1fr;
-            /* 2 columnas */
-        }
-
-        .card-testimonio {
-            width: 16rem;
             height: auto;
         }
     }

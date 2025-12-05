@@ -1,4 +1,5 @@
 @use "variables" as v;
+
 .main {
     background-color: v.$background;
     display: block;
@@ -29,18 +30,20 @@
         .bloque__title :hover {
             opacity: 80%;
         }
-    
 
-@include v.mobile {
+
+
+        @include v.table {
+            .main {
+                width: 85%;
+            }
+        }
+    }
+
+    @include v.mobile {
         main {
             width: 95%;
             padding: 15px;
-        }
-    }
-}
-@include v.table {
-        .main {
-            width: 85%;
         }
     }
 }
